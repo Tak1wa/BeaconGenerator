@@ -8,9 +8,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <!--<Page.DataContext>
+    <Page.DataContext>
         <vm:GenerateViewModel />
-    </Page.DataContext>-->
+    </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -32,13 +32,19 @@
         <TextBlock Grid.Row="3" Grid.Column="0" Text="Minor:" />
         <TextBlock Grid.Row="4" Grid.Column="0" Text="Power:" />
 
-        <TextBox Grid.Row="0" Grid.Column="1" Text="" />
-        <TextBox Grid.Row="1" Grid.Column="1" Text="" />
-        <TextBox Grid.Row="2" Grid.Column="1" Text="" />
-        <TextBox Grid.Row="3" Grid.Column="1" Text="" />
-        <TextBox Grid.Row="4" Grid.Column="1" Text="" />
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Identifier.Value, Mode=TwoWay}" />
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Uuid.Value, Mode=TwoWay}" />
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Major.Value, Mode=TwoWay}" />
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Minor.Value, Mode=TwoWay}" />
+        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Power.Value, Mode=TwoWay}" />
 
-        <Button Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Content="Register." />
-
+        <Button Grid.Row="5" Grid.Column="0" 
+                HorizontalAlignment="Stretch" 
+                Content="Register." 
+                Command="{Binding CommandRegist}" />
+        <Button Grid.Row="5" Grid.Column="1"
+                HorizontalAlignment="Stretch"
+                Content="Test."
+                Command="{Binding CommandTest}" />
     </Grid>
 </Page>

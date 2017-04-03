@@ -16,34 +16,19 @@ namespace BeaconGenerator.Models.Services
             var list = new List<GeneratedBeacon>();
             foreach(var current in repo.GetBeacons())
             {
-                list.Add(new GeneratedBeacon
+                var beacon = new GeneratedBeacon
                 {
                     Identifier = current.Identifier,
                     Uuid = current.Uuid,
                     Major = current.Major,
                     Minor = current.Minor,
                     Power = current.Power,
-                });
+                };
+                beacon.InitializeController();
+                list.Add(beacon);
             }
             return list;
         }
-        
-        public GeneratedBeacon Generate(string uuid = null, ushort major = 1, ushort minor = 1, byte power = 0x1E)
-        {
-            if (uuid == null)
-            {
-                uuid = Guid.NewGuid().ToString();
-            }
 
-            var generate = new GeneratedBeacon
-            {
-                Uuid = uuid,
-                Major = major,
-                Minor = minor,
-                Power = power
-            };
-
-            return generate;
-        }
     }
 }

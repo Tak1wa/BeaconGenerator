@@ -59,9 +59,13 @@ namespace BeaconGenerator.Models
 
         public IBeaconController BeaconController { get; set; }
 
-        public GeneratedBeacon(IBeaconController beaconController = null)
+        public GeneratedBeacon()
         {
-            if(beaconController == null)
+        }
+
+        public void InitializeController(IBeaconController beaconController = null)
+        {
+            if (beaconController == null)
                 BeaconController = ServiceFactory.CreateBeaconController();
             else
                 BeaconController = beaconController;
