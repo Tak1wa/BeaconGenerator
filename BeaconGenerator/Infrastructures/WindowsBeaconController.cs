@@ -25,15 +25,20 @@ namespace BeaconGenerator.Infrastructures
             Stop();
 
             publisher = new BluetoothLEAdvertisementPublisher();
+            
+            //---------------------
+            // Manufacturer data
+            //---------------------
             var manufacturerData = new BluetoothLEManufacturerData();
 
-            //Bluetooth SIG に登録している　企業識別子
-            //manufacturerData.CompanyId = 0x0000;
+            //0x004c : Appleを示す。iBeaconの固定値
+            manufacturerData.CompanyId = 0x004c;
             
             var guildArray = Guid.Parse(uuid).ToByteArray();
             var majorArray = BitConverter.GetBytes(major);
             var minorArray = BitConverter.GetBytes(minor);
-            
+            var tx_power = 256 - power;
+
             byte[] dataArray = new byte[] {
                 // お決まり
                 0x02, 0x15,
