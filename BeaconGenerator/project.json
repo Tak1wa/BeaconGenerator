@@ -1,6 +1,7 @@
 ﻿{
   "dependencies": {
     "Autofac": "4.4.0",
+    "LiteDB": "3.1.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Prism.Core": "6.3.0",
     "ReactiveProperty": "2.9.0"

@@ -1,4 +1,5 @@
-﻿using BeaconGenerator.Models.Repositories;
+﻿using BeaconGenerator.Models.Entities;
+using BeaconGenerator.Models.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,5 +31,25 @@ namespace BeaconGenerator.Models.Services
             return list;
         }
 
+        public void RegistBeacon(GeneratedBeacon beacon)
+        {
+            var regist = new Beacon
+            {
+                Identifier = beacon.Identifier,
+                Uuid = beacon.Uuid,
+                Major = beacon.Major,
+                Minor = beacon.Minor,
+                Power = beacon.Power,
+            };
+
+            var repo = new GeneratedBeaconsRepository();
+            repo.RegistBeacon(regist);
+        }
+
+        public void DeleteBeacon(GeneratedBeacon beacon)
+        {
+            var repo = new GeneratedBeaconsRepository();
+            repo.DeleteBeacon(beacon.Identifier);
+        }
     }
 }

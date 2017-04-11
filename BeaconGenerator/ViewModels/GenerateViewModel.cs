@@ -33,6 +33,8 @@ namespace BeaconGenerator.ViewModels
 
         public ReactiveCommand CommandRegist { get; set; }
 
+        public ReactiveCommand CommandDelete { get; set; }
+
         public GenerateViewModel()
         {
             Model = new GeneratedBeacon();
@@ -81,6 +83,8 @@ namespace BeaconGenerator.ViewModels
 
             CommandRegist.Subscribe(_ => Model.Regist());
 
+            CommandDelete = new ReactiveCommand();
+            CommandDelete.Subscribe(_ => Model.Delete());
         }
 
     }

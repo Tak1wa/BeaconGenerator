@@ -92,12 +92,14 @@ namespace BeaconGenerator.Models
 
         public void Regist()
         {
-            //TODO:Not Implemented.
+            var service = new BeaconManageService();
+            service.RegistBeacon(this);
         }
 
         public void Delete()
         {
-            //TODO:Not Implemented.
+            var service = new BeaconManageService();
+            service.DeleteBeacon(this);
         }
 
         #endregion
