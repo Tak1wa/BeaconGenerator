@@ -41,45 +41,47 @@
                                 <Style TargetType="TextBlock">
                                     <Setter Property="Margin" Value="10" />
                                 </Style>
-                                <Style TargetType="Border">
+                                <Style x:Key="GridBorder" TargetType="Border">
                                     <Setter Property="BorderBrush" Value="Silver" />
                                     <Setter Property="BorderThickness" Value="1" />
                                 </Style>
                             </Grid.Resources>
 
-                            <Border Grid.Column="0" Grid.Row="0">
+                            <Border Grid.Column="0" Grid.Row="0" Style="{StaticResource GridBorder}">
                                 <TextBlock Text="Identifier" />
                             </Border>
-                            <Border Grid.Column="0" Grid.Row="1">
+                            <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource GridBorder}">
                                 <TextBlock Text="Uuid" />
                             </Border>
-                            <Border Grid.Column="0" Grid.Row="2">
+                            <Border Grid.Column="0" Grid.Row="2" Style="{StaticResource GridBorder}">
                                 <TextBlock Text="Major" />
                             </Border>
-                            <Border Grid.Column="0" Grid.Row="3">
+                            <Border Grid.Column="0" Grid.Row="3" Style="{StaticResource GridBorder}">
                                 <TextBlock Text="Minor" />
                             </Border>
-                            <Border Grid.Column="0" Grid.Row="4">
+                            <Border Grid.Column="0" Grid.Row="4" Style="{StaticResource GridBorder}">
                                 <TextBlock Text="Power" />
                             </Border>
 
-                            <Border Grid.Column="1" Grid.Row="0">
-                                <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Stretch">
-                                    <TextBlock Text="{Binding Identifier.Value}" />
-                                </Viewbox>
-                            </Border>
-                            <Border Grid.Column="1" Grid.Row="1">
-                                <Viewbox StretchDirection="DownOnly">
-                                    <TextBlock Text="{Binding Uuid.Value}" />
-                                </Viewbox>
-                            </Border>
-                            <Border Grid.Column="1" Grid.Row="2">
+                            <Border Grid.Column="1" Grid.Row="0"  Style="{StaticResource GridBorder}"/>
+                            <Viewbox StretchDirection="DownOnly" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left">
+                                <TextBlock Text="{Binding Identifier.Value}" />
+                            </Viewbox>
+
+                            <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource GridBorder}"/>
+                            <Viewbox Grid.Column="1" Grid.Row="1" >
+                                <TextBlock Text="{Binding Uuid.Value}" />
+                            </Viewbox>
+
+                            <Border Grid.Column="1" Grid.Row="2" Style="{StaticResource GridBorder}">
                                 <TextBlock Text="{Binding Major.Value}" />
                             </Border>
-                            <Border Grid.Column="1" Grid.Row="3">
+
+                            <Border Grid.Column="1" Grid.Row="3" Style="{StaticResource GridBorder}">
                                 <TextBlock Text="{Binding Minor.Value}" />
                             </Border>
-                            <Border Grid.Column="1" Grid.Row="4">
+
+                            <Border Grid.Column="1" Grid.Row="4" Style="{StaticResource GridBorder}">
                                 <TextBlock Text="{Binding Power.Value}" />
                             </Border>
 
