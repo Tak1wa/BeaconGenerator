@@ -64,13 +64,13 @@
                             </Border>
 
                             <Border Grid.Column="1" Grid.Row="0">
-                                <Viewbox StretchDirection="DownOnly">
-                                    <TextBlock Text="{Binding Identifier.Value}" HorizontalAlignment="Stretch" />
+                                <Viewbox StretchDirection="DownOnly" HorizontalAlignment="Stretch">
+                                    <TextBlock Text="{Binding Identifier.Value}" />
                                 </Viewbox>
                             </Border>
                             <Border Grid.Column="1" Grid.Row="1">
                                 <Viewbox StretchDirection="DownOnly">
-                                    <TextBlock Text="{Binding Uuid.Value}" HorizontalAlignment="Stretch" />
+                                    <TextBlock Text="{Binding Uuid.Value}" />
                                 </Viewbox>
                             </Border>
                             <Border Grid.Column="1" Grid.Row="2">
