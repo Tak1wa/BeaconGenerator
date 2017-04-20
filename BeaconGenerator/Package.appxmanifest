@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="af40ece6-2cb3-41d0-9bcc-96270c66b0c0" Publisher="CN=iwasa-t" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="af40ece6-2cb3-41d0-9bcc-96270c66b0c0" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="41362Tak1wa.BeaconGenerator" Publisher="CN=C5054B33-F8C9-4FDE-BBFC-B4A81E0D69C0" Version="1.1.3.0" />
+  <mp:PhoneIdentity PhoneProductId="ac1976d0-9849-432e-a8b3-83c052de773c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>BeaconGenerator</DisplayName>
-    <PublisherDisplayName>iwasa-t</PublisherDisplayName>
+    <PublisherDisplayName>Tak1wa</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -16,7 +16,7 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="BeaconGenerator.App">
       <uap:VisualElements DisplayName="BeaconGenerator" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="BeaconGenerator" BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png" ShortName="BeaconGenerator">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
