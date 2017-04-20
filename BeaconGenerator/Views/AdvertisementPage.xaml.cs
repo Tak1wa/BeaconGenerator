@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeaconGenerator.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,12 @@ namespace BeaconGenerator.Views
         public AdvertisementPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            var vm = DataContext as AdvertisementViewModel;
+            vm?.CommandRefresh.Execute();
         }
     }
 }
