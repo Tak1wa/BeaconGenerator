@@ -4,7 +4,6 @@
     "LiteDB": "3.1.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Prism.Core": "6.3.0",
-    "PullToRefresh.UWP": "0.3.4",
     "ReactiveProperty": "2.9.0"
   },
   "frameworks": {
